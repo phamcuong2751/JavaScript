@@ -34,8 +34,5 @@ while (choseQuestion < 4) {
         default:
             choseQuestion = 4;
             break;
-            //Mới thêm code ở đây nè
-
-
     }
 }
