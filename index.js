@@ -11,9 +11,8 @@ let students = [];
 let isStudent = {};
 let fileStudent = fs.readFileSync('./Student.txt');
 while (choseQuestion < 4) {
-
-
-    switch (choseQuestion) {
+    let choseQuestion = readlineSync.question("Which option do you choose?: ");
+    switch (parseInt(choseQuestion)) {
         case 1:
             //Print lish Students
             console.log(students);
@@ -27,8 +26,7 @@ while (choseQuestion < 4) {
             isStudent.name = name;
             isStudent.age = age;
             isStudent.weith = parseInt(weith);
-            console.log(isStudent);
-            students.join(isStudent);
+            students.unshift(isStudent);
             break;
         case 3:
             //Save and Exit
@@ -37,6 +35,7 @@ while (choseQuestion < 4) {
             choseQuestion = 4;
             break;
             //Mới thêm code ở đây nè
+
 
     }
 }
