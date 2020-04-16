@@ -19,14 +19,15 @@ while (choseQuestion < 4) {
             break;
         case 2:
             //Create and addition a new Students
+            let isNewStudent = new students;
             console.log("Create and addition a new Students");
             let name = readlineSync.question("What student's name?: ");
             let age = readlineSync.question("Age?: ");
             let weith = readlineSync.question("Weith?: ");
-            isStudent.name = name;
-            isStudent.age = age;
-            isStudent.weith = parseInt(weith);
-            students.unshift(isStudent);
+            isNewStudent.name = name;
+            isNewStudent.age = age;
+            isNewStudent.weith = parseInt(weith);
+            students.unshift(isNewStudent);
             break;
         case 3:
             //Save and Exit
