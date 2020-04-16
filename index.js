@@ -2,12 +2,39 @@
 
 // console.log(math.sum([1, 2, 3, 4]));
 // console.log(math.multi(100, 2));
+let fs = require('fs');
 let readlineSync = require('readline-sync');
-let isMine = {};
-let name = readlineSync.question("What your name?: ");
-let age = readlineSync.question("How old are you?: ");
-let weith = readlineSync.question("Your weith?: ");
-isMine.name = name;
-isMine.age = age;
-isMine.weith = parseInt(weith);
-console.log(isMine);
+let choseQuestion = readlineSync.question("Which option do you choose?: ");
+
+let students = [];
+
+let isStudent = {};
+let fileStudent = fs.readFileSync('./Student.txt');
+while (choseQuestion < 4) {
+
+
+    switch (choseQuestion) {
+        case 1:
+            //Print lish Students
+            console.log(students);
+            break;
+        case 2:
+            //Create a new Students
+            console.log("Thêm Sinh viên: ");
+            let name = readlineSync.question("What student's name?: ");
+            let age = readlineSync.question("Age?: ");
+            let weith = readlineSync.question("Weith?: ");
+            isStudent.name = name;
+            isStudent.age = age;
+            isStudent.weith = parseInt(weith);
+            console.log(isStudent);
+            students.join(isStudent);
+            break;
+        case 3:
+            //Save and Exit
+            break;
+        default:
+            choseQuestion = 4;
+            break;
+    }
+}
