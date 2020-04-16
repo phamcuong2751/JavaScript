@@ -19,8 +19,8 @@ while (choseQuestion < 4) {
             console.log(students);
             break;
         case 2:
-            //Create a new Students
-            console.log("Thêm Sinh viên: ");
+            //Create and addition a new Students
+            console.log("Create and addition a new Students");
             let name = readlineSync.question("What student's name?: ");
             let age = readlineSync.question("Age?: ");
             let weith = readlineSync.question("Weith?: ");
@@ -37,5 +37,6 @@ while (choseQuestion < 4) {
             choseQuestion = 4;
             break;
             //Mới thêm code ở đây nè
+
     }
 }
